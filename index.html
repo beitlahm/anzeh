@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link rel="icon" type="image/png" href="icon (1).png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>anzeh</title>
 </head>
+
 <style>
-    p {
-        font-size: 31px;
-        text-align: center;
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-</style>
-<body>
-<h1>anzeh.me is working...</h1> 
-<p> omar alzeer momen hammad<br> yusuf mohtree<br>ammar dweib</p> 
-<p>first test</p>
-</body>
-</html>
+    .container {
+      display: flex;
+    }
+    .left {
+      width: 40%;
+      position: fixed;
+      height: 100%;
+      padding: 40px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+    }
+    .right {
+      margin-left: 40%;
+      width: 60%;
+      padding: 40px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+    }
+    section {
+      margin-bottom: 100px;
+    }
+ </style>
+ </head>
+ <body>
+ <div class="container">
+ <div class="left">
+ <h1>Carlos</h1>
+ <p>CS Student</p>
+ <nav>
+ <a href="#about">About</a>
+ <a href="#experience">Experience</a>
+ <a href="#projects">Projects</a>
+ <a href="#contact">Contact</a>
+ </nav>
+ </div>
+ <div class="right">
+ <section id="about">
+ <h2>About</h2>
+ <p>Write about yourself here.</p>
+ </section>
+ <section id="experience">
+ <h2>Experience</h2>
+ </section>
+ <section id="projects">
+ <h2>Projects</h2>
+ </section>
+ <section id="contact">
+ <h2>Contact</h2>
+ </section>
+ </div>
+ </div>
+ </body>
+ </html>
