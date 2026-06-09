@@ -1,14 +1,14 @@
 /* ── TOKENS ── */
 :root {
     --color-bg: #0f172a;
-    --color-bg-card: rgba(0, 0, 0, 0.4);
-    --color-bg-card-hover: rgba(0, 0, 0, 0.6);
-    --color-text-primary: #8EC896;
-    --color-text-heading: #C4DC98;
-    --color-text-muted: #8EC896;
-    --color-text-subtle: #8EC896;
-    --color-accent: #7C8C5A;
-    --color-accent-light: #8B9EC4;
+    --color-bg-card: rgba(0, 0, 0, 0.65);
+    --color-bg-card-hover: rgba(0, 0, 0, 0.85);
+    --color-text-primary: #D4E6EE;
+    --color-text-heading: #F7F2E4;
+    --color-text-muted: #D4E6EE;
+    --color-text-subtle: #D4E6EE;
+    --color-accent: #90E4C2;
+    --color-accent-light: #A0AECB;
     --color-accent-bg: rgba(139, 158, 196, 0.15);
     --color-link: #3B6B42;
     --color-focus: #7C8C5A;
@@ -369,13 +369,24 @@ address {
     position: relative;
     margin: 0 calc(-1 * var(--space-4));
     padding: var(--space-3);
-    border-radius: var(--radius-lg);
-    border: 4px solid rgba(240, 255, 240, 0.09);
+    border-radius: 0;
+    border: 0;
+    background: var(--color-bg-card);
     transition: background var(--transition-base),
         box-shadow var(--transition-base),
         opacity var(--transition-base),
         border-color var(--transition-base);
     cursor: pointer;
+}
+
+.card-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 @media (min-width: 768px) {
@@ -386,9 +397,17 @@ address {
 }
 
 .card-link:hover {
-    background: var(--color-bg-card-hover);
+    background: var(--color-bg-card);
     box-shadow: var(--shadow-card);
-    border-color: rgba(139, 158, 196, 0.35);
+}
+
+.card-link:hover::before {
+    border-color: var(--color-link);
+    box-shadow:
+        -4px -4px 0 0 var(--color-link),
+         4px -4px 0 0 var(--color-link),
+        -4px  4px 0 0 var(--color-link),
+         4px  4px 0 0 var(--color-link);
 }
 
 .card-grid {
@@ -518,8 +537,7 @@ address {
     z-index: 0;
 }
 
-.project-media img:first-child,
-.project-media img.media-active {
+.project-media img:first-child {
     opacity: 1;
     z-index: 10;
 }
@@ -604,7 +622,7 @@ address {
 }
 
 .footer-link {
-    color: var(--color-link);
+    color: var(--color-text-heading);
     font-weight: 500;
     transition: color var(--transition-base);
 }
@@ -636,7 +654,7 @@ address {
     }
 
     to {
-        background-position-x: -1920px, -1440px, -480px, -240px;
+        background-position-x: -1920px, -1920px, -3840px, -5760px;
     }
 }
 
@@ -646,7 +664,8 @@ address {
         url('bg1/plain%20green.png'),
         url('bg1/clouds.png'),
         url('bg1/sky%20with%20some%20clouds.png');
-    animation: parallax-bg-1 45s linear infinite;
+    background-repeat: repeat-x;
+    animation: parallax-bg-1 320s linear infinite;
 }
 
 @keyframes parallax-bg-2 {
@@ -655,7 +674,7 @@ address {
     }
 
     to {
-        background-position-x: -1920px, -1440px, -480px, -240px, 0;
+        background-position-x: -1920px, -1920px, -3840px, -5760px, 0;
     }
 }
 
@@ -666,7 +685,8 @@ address {
         url('bg2/clouds.png'),
         url('bg2/tiny%20cloud.png'),
         url('bg2/plain%20sky(i%20dont%20think%20this%20should%20move).png');
-    animation: parallax-bg-2 45s linear infinite;
+    background-repeat: repeat-x;
+    animation: parallax-bg-2 320s linear infinite;
 }
 
 @keyframes parallax-bg-3 {
@@ -675,7 +695,7 @@ address {
     }
 
     to {
-        background-position-x: -1920px, -1440px, -960px, -480px;
+        background-position-x: -1920px, -1920px, -3840px, -5760px;
     }
 }
 
@@ -685,5 +705,6 @@ address {
         url('bg3/plain%20grass.png'),
         url('bg3/hill.png'),
         url('bg3/clouds.png');
-    animation: parallax-bg-3 45s linear infinite;
+    background-repeat: repeat-x;
+    animation: parallax-bg-3 320s linear infinite;
 }
