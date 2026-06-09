@@ -370,9 +370,11 @@ address {
     margin: 0 calc(-1 * var(--space-4));
     padding: var(--space-3);
     border-radius: var(--radius-lg);
+    border: 4px solid rgba(240, 255, 240, 0.09);
     transition: background var(--transition-base),
         box-shadow var(--transition-base),
-        opacity var(--transition-base);
+        opacity var(--transition-base),
+        border-color var(--transition-base);
     cursor: pointer;
 }
 
@@ -386,6 +388,7 @@ address {
 .card-link:hover {
     background: var(--color-bg-card-hover);
     box-shadow: var(--shadow-card);
+    border-color: rgba(139, 158, 196, 0.35);
 }
 
 .card-grid {
