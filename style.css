@@ -650,26 +650,6 @@ address {
 
 
 /* ── PARALLAX BACKGROUNDS ── */
-@keyframes parallax-bg-1 {
-    from {
-        background-position-x: 0, 0, 0, 0;
-    }
-
-    to {
-        background-position-x: -1920px, -1920px, -3840px, -5760px;
-    }
-}
-
-.bg-1 {
-    background-image:
-        url('bg1/grass%20with%20more%20detail%20and%20has%20flowers.png'),
-        url('bg1/plain%20green.png'),
-        url('bg1/clouds.png'),
-        url('bg1/sky%20with%20some%20clouds.png');
-    background-repeat: repeat-x;
-    animation: parallax-bg-1 320s linear infinite;
-}
-
 @keyframes parallax-bg-2 {
     from {
         background-position-x: 0, 0, 0, 0, 0;
@@ -753,27 +733,4 @@ address {
     animation: parallax-bg-6 320s linear infinite;
 }
 
-@keyframes parallax-bg-5 {
-    from {
-        background-position-x: 0, 0, 0, 0, 0, 0, 0, 0;
-    }
 
-    to {
-        /* Layer 8 down to Layer 1 speeds. */
-        background-position-x: -13440px, -11520px, -9600px, -7680px, -5760px, -3840px, -1920px, 0px;
-    }
-}
-
-.bg-5 {
-    background-image:
-        url('bg5/detailed%20grass8.png'),
-        url('bg5/closer%20tree7.png'),
-        url('bg5/further%20tree6.png'),
-        url('bg5/patch%20of%20bushes5.png'),
-        url('bg5/green%20grass%20bg4.png'),
-        url('bg5/less%20detailed%20grass3.png'),
-        url('bg5/clouds2.png'),
-        url('bg5/sky1.png');
-    background-repeat: repeat-x;
-    animation: parallax-bg-5 320s linear infinite;
-}
