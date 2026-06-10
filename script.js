@@ -39,7 +39,9 @@
         }, 3000);
     });
 
-    /* Random background: adds .bg-1, .bg-2, or .bg-3 to <body> */
-    document.body.classList.add(`bg-${Math.floor(Math.random() * 3) + 1}`);
+    /* Random background: adds one of the available parallax background classes to <body>. */
+    const backgrounds = ['bg-1', 'bg-2', 'bg-2', 'bg-3', 'bg-7', 'bg-6', 'bg-5'];
+    const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.body.classList.add(randomBg);
 
 })();
