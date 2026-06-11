@@ -40,7 +40,7 @@
     });
 
     /* Random background: adds one of the available parallax background classes to <body>. */
-    const backgrounds = ['bg-2', 'bg-2', 'bg-3', 'bg-3', 'bg-7', 'bg-7', 'bg-7', 'bg-7', 'bg-7', 'bg-6', 'bg-6'];
+    const backgrounds = ['bg-2', 'bg-2', 'bg-2', 'bg-3', 'bg-3', 'bg-7', 'bg-7', 'bg-7', 'bg-7', 'bg-7', 'bg-6', 'bg-6'];
     const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     document.body.classList.add(randomBg);
 
